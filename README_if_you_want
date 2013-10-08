@@ -1,0 +1,14 @@
+DETTE ER EKSTRA, OM DU BARE VIL HA DET TIL Å KJØRE, GJØR SOM TIDLIGERE
+ANVIST
+
+Hei, mappa "template" er en utpakka versjon av siste utgave på
+http://emacs-template.sourceforge.net/
+
+Om du ønsker nyeste versjon, kan du gå inn på linken selv og pakk ut
+med kommando:
+
+tar -xzvf template-*.tar.gz
+
+og kjør deretter scriptet som før
+
+sh install_template.sh
