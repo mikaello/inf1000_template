@@ -3,11 +3,9 @@
    ## Date:   (>>>VC_DATE<<<)
  */
 
-#include <stdio.h>
-#include "(>>>FILE_SANS<<<).h"
+#include "/uio/aristoteles/s20/mikaello/Dropbox/ifi/mikaello/inf2100/cflat/ificflatlib.c"
 
-int main(int argc, char **argv, char **envp) {
+int main() {
 (>>>POINT<<<)
 
-  return 0;
 }

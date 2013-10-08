@@ -1,24 +1,61 @@
-%%% TEMPLATE.tex.tpl --- (>>>POINT<<<)
+%% Opprettet: (>>>VC_DATE<<<)
 
-%% Author: (>>>AUTHOR<<<)
-%% Version: $Id: (>>>FILE<<<),v 0.0 (>>>VC_DATE<<<) (>>>LOGIN_NAME<<<) Exp$
+\documentclass[11pt,norsk,a4paper]{article}
+\newcounter{qcounter}            % Brukes sammen med setcounter (nedenfor)
+\usepackage[T1]{fontenc,url}     % Standard fontencoding og url-encoding
+\usepackage[sc,osf]{mathpazo}    % Font anbefalt av Dag Langemyhr
+\usepackage[utf8]{inputenc}      % UTF encoding
+% \usepackage{listings}            % For kode i teksten
+% \usepackage[pdftex]{graphicx}    % For bilde og PDF
+\usepackage{babel,textcomp,varioref}
+%% babel    = alt som har med språk å gjøre
+%% textcomp = utvidet sett med forskjellige symboler
+%% varioref = for å bruke \vref
 
+%% Matematikk og logikk
+% \usepackage[mathcal]{euscript} % For potensmengde P (\mathcal{P})
+% \usepackage{amsmath,amssymb,,upgreek}
+%% amsmath  = matematikksymboler
+%% amssymb  = yttligere matematikksymboler
+%% upgreek  = smudere lambda symbol (\uplambda)
 
-\documentclass[12pt,draft,a4paper]{article}
-%%\usepackage[debugshow,final]{graphics}
+%% Tabell stæsj:
+% \usepackage{booktabs,enumitem,tabularx}
+% \usepackage{ltxtable,longtable}
+%% booktabs = For \midrule, \toprule og \bottomrule til i fungere i tabeller
+%% enumitem = For at [label=HVASOMHELST] skal fungere i enumerate
+%% tabularx = For smidigere tabeller (bruk tabularx)
+%% ltxtable = For å få tabeller over flere sider (og fordelen med tabularx)
+%%   (bruk \LTXtable{width}{file.tex} for å laste inn fil med longtable env.)
+%% longtable= Sammen med ltxtable for å få tabell over flere sider
 
-%%\revision$Header: (>>>DIR<<<)(>>>FILE<<<),v 0.0 (>>>VC_DATE<<<) (>>>LOGIN_NAME<<<) Exp$
+%\pagestyle{empty}      % Fjern kommentering om du ikke ønsker sidenr.
 
+%\usepackage{hyperref}  % Brukes for å lage hypertekst av TOC mm.
+%\hypersetup{           % Utseende til hypertekst
+%    colorlinks=true,
+%    pdfborder={0 0 0}, % Viss 'colorlinks=false' og du ikke ønsker ramme
+%    citecolor=blue,
+%    filecolor=blue,
+%    linkcolor=blue,
+%    urlcolor=red
+%}
+
+\tolerance = 5000       % LaTeX er normalt streng når det gjelder linje-
+\hbadness = \tolerance  % brytingen. Vi vil være litt mildere, særlig fordi
+\pretolerance = 2000    % norsk har så mange lange sammensatte ord.
+
+\title{(>>>tittel<<<)}
+\author{(>>>navn<<<)}
 \begin{document}
 
-
-%%%%##########################################################################
+\setcounter{secnumdepth}{-1} % Fjerner nummer fra overskrift, men TOC fungerer
 
-\section{(>>>1<<<)}
+\maketitle{}
 
-
-
-
-%%%%##########################################################################
-
+(>>>POINT<<<)
 \end{document}
+
+>>>TEMPLATE-DEFINITION-SECTION<<<
+("tittel" "Dokument tittel: ")
+("navn" "Navn: ")
